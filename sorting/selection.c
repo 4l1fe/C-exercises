@@ -1,17 +1,9 @@
 #include <stdio.h>
+#include "common.h"
 
 #define SIZE 7
 
 int array[SIZE] = {4,6,3,2,1,9,7};
-
-void display() {
-    int i;
-
-    for (i=0; i<SIZE; i++) {
-        printf("%d", array[i]);
-    }
-    printf("\n");
-}
 
 void selectionSort() {
     int i, j, min, tmp;
@@ -31,16 +23,16 @@ void selectionSort() {
             array[min] = tmp;
         }
         printf("Iteration %d#:",(i+1));
-        display();
+        display(array, SIZE);
         printf("\n");
     }
 }
 
-    void main() {
+void main() {
     printf("Input: ");
-    display();
+    display(array, SIZE);
     printf("\n");
     selectionSort();
     printf("Output: ");
-    display();
+    display(array, SIZE);
 }

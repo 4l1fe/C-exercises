@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include "common.h"
 
 #define SIZE 20
 
 int array[SIZE] = {19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-
-void display() {
-    int i;
-    for (i=0; i<SIZE; i++) {
-        printf("%d", array[i]);
-    }
-}
 
 void bubbleSort() {
     int i, j, tmp;
@@ -33,18 +27,18 @@ void bubbleSort() {
             break;
         }
         printf("Iteration: ");
-        display();
+        display(array, SIZE);
         printf("\n");
     }
 }
 
 void main() {
     printf("Input:");
-    display();
+    display(array, SIZE);
     printf("\n");
 
     bubbleSort();
     printf("sorted:");
-    display();
+    display(array, SIZE);
     printf("\n");
 }

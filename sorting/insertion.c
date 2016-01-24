@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "common.h"
 
 #define SIZE 10
 
@@ -13,16 +14,7 @@ void printline(int count) {
     printf("\n");
 }
 
-void display() {
-    int i;
-
-    for (i=0; i<SIZE; i++) {
-        printf("%d", array[i]);
-    }
-    printf("\n");
-}
-
-void isertionSort() {
+void insertionSort() {
     int i, value, position;
 
     for (i=1; i<SIZE; i++) {
@@ -39,16 +31,16 @@ void isertionSort() {
             array[position] = value;
         }
         printf("Iteration %d#:", i);
-        display();
+        display(array, SIZE);
     }
 }
 
 void main() {
     printf("Input:");
-    display();
+    display(array, SIZE);
     printline(50);
     isertionSort();
     printf("Output:");
-    display();
+    display(array, SIZE);
     printline(50);
 }
