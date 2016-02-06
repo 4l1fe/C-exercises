@@ -8,9 +8,7 @@ struct node {
     int key;
     struct node *next;
 };
-
 struct node *head = NULL;
-//struct node *n = NULL;
 
 struct node* insert(int key, int data) {
     struct node *n = (struct node*) malloc(sizeof(struct node));
