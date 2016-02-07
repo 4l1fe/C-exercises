@@ -10,7 +10,7 @@ struct node {
 };
 struct node *head = NULL;
 
-struct node* insert(int key, int data) {
+void insert(int key, int data) {
     struct node *n = (struct node*) malloc(sizeof(struct node));
     n->key = key;
     n->data = data;
